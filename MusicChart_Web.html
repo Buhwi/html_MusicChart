@@ -1,0 +1,1151 @@
+<!DOCTYPE html>
+
+
+<html>
+    <head>
+        <link href="TJ.png" rel="shortcut icon" type="image/x-icon">
+        <title>대구대 TJ</title>
+        <style>
+            .hz{
+                position:absolute;
+                padding-right:10%;
+            }
+            hr{
+                width:100%;
+                width:1500px;
+                margin-left:270px;
+            }
+            /*선 색깔 연하게*/
+            hr.thu{
+                border:solid 0.5px rgb(218, 218, 218);
+            }
+            /*TOP 50*/
+            h1.head{
+                margin-left:280px;
+                max-width:100%;
+                height:auto;
+            }
+            /*대구대 로고*/
+            img.head{
+                position:relative;
+                margin-left:1650px;
+                top:80px;
+                z-index:2;
+            }
+       
+            /*뮤비 아이콘*/                  
+            img.play_2{
+                position:absolute;
+                width:30px;
+                margin-left:1625px;
+                margin-top:10px;
+             
+            }
+            /*앨범 이미지*/
+            img.music_img{
+                position:absolute;
+                width:80px;
+                margin-top:-10px;
+                margin-left:430px;
+                float:left;
+            }
+            /*가사 아이콘*/
+            img.music_img_2{
+                position:absolute;
+                width:25px;
+                margin-left:560px;
+                margin-top:20px;
+                float:left;
+            }
+            /*순위(목록)*/
+            div.music{
+                margin-left:300px;
+                float:left;
+            }
+            /*곡 정보(목록)*/
+            div.music_2{
+                position:relative;
+                margin-left:260px;
+                float:left;
+            }
+            /*앨범(목록)*/
+            div.music_3{
+                margin-left:210px;
+                float:left;
+            }
+            /*듣기(목록)*/
+            div.play{
+                margin-left:450px;
+                float:left;
+            }
+            /*뮤비(목록)*/
+            div.vedio{
+                position:relative;
+                margin-left:280px;
+                float:left;
+            }
+            /*순위(아랫쪽)*/
+            div.char{
+                position:absolute;
+                margin-left:300px;
+                margin-top:20px;
+                float:left;
+            }
+            /*곡 정보(아랫쪽)*/
+            div.char_2{
+                position:absolute;
+                margin-left:600px;
+                margin-top:20px;
+                float:left;
+            }
+            /*앨범(아랫쪽)*/
+            div.char_3{
+                position: absolute;
+                margin-left:850px;
+                margin-top:20px;
+                float:left;
+            }
+            /*가수 명*/
+            p.char_4{
+                margin-left:595px;
+                margin-top:20px;
+            }
+            /*오디오 태그*/
+            .control{
+                position: absolute;
+                width:300px;
+                float:left;
+                margin-left:1200px;
+                margin-top:1px;
+            }
+            /*고정 태그*/
+            .fix{
+                position:fixed;
+            }
+            /*검색(돋보기) 태그*/
+            .button{
+                position:fixed;
+                background:url(data:image/png;base64,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)
+                no-repeat;
+                background-size:45px;
+                border:none;
+                width:45px;
+                height:45px;
+                z-index:4;
+                right:6.5%;
+            }
+            /*가사 아이콘 태그*/
+            .gasa{
+                position:absolute;
+                background:url(data:image/png;base64,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)
+                no-repeat;
+                background-size:25px;
+                border:none;
+                width:25px;
+                height: 25px;
+                margin-left:560px;
+                margin-top:20px;
+                float:left;
+            }
+            /*뮤직 비디오 아이콘 태그*/
+            .movie{
+                position:absolute;
+                background:url(https://cdn-icons-png.flaticon.com/512/0/375.png)
+                no-repeat;
+                background-size:30px;
+                height: 30px;
+                border:none;
+                width:30px;
+                margin-left:1650px;
+                margin-top:10px;
+            }
+            /*대구대 TJ 로고 태그*/
+            .TJ {
+                position:fixed;
+                background:url(Tj.png)
+                no-repeat;
+                background-size:105px;
+                width:100px;
+                height:75px;
+                top:-0.0px;
+                left:5%;
+                border:none;
+                z-index:4;
+
+            }
+            /*검색 말풍선 태그(span, arrow_box, arrow_box:after, span:hover)*/
+            span{
+                display:flex;
+                width:200px;
+                padding:16px 16px;
+                cursor:pointer;
+            }
+            .arrow_box {
+                display: none;
+                position: absolute;
+                width: 100px;
+                padding: 8px;
+                left: 0;
+                -webkit-border-radius: 20px;
+                -moz-border-radius: 20px;
+                border-radius: 20px;
+                background: #333;
+                color: #fff;
+                font-size: 14px;
+            }
+            .arrow_box:after{
+                position:absolute;
+                bottom:100%;
+                left:40%;
+                width: 0;
+                height: 0;
+                margin-left: -30px;
+                margin-top:20px;
+                border: solid transparent;
+                border-color: rgba(51, 51, 51, 0);
+                border-bottom-color: #333;
+                border-width: 10px;
+                pointer-events: none;
+                content: ' ';
+            }
+            span:hover + p.arrow_box{
+                display:block;
+            }
+        </style>
+        <style type="text/css">
+            /*링크 색상 검정색으로*/
+            a:link{
+                color:black;
+                text-decoration:none;
+            }
+            a:visited{
+                color:black;
+                text-decoration:none;
+            }
+            a:hover{
+                color:black;
+                text-decoration:none;
+            }
+        </style>
+    </head>
+    <body class="hz">
+        <div class="fix" style="background-color:rgb(255, 255, 255);padding:35px;padding-left:5000px;margin-left:-100px;margin-top:-20px; z-index:3;;"></div>
+        <div class="fix" style="background-color:rgb(96, 195, 96);padding:1px;padding-left:5000px;margin-left:-100px;margin-top:50px;z-index:3;"></div>
+        <button onclick="home()" class="TJ"></button>
+        
+        <input type="text" class="fix" style="width:300px;right:10%;z-index:4;height:45px;font-size:large;border:none;" id="searchInput" list="list" placeholder="검색어를 입력하세요" onKeypress="javascript:if(event.keyCode==13) {search();}"/>
+
+        <button onclick="search()" class="button"><div><span></span><p class="arrow_box">검색</p></div></button>
+        
+        <datalist id ="list">
+            <option value="I am" />
+            <option value="UNFORGIVEN" />
+            <option value="Spicy" />
+            <option value="Kitsch" />
+            <option value="퀸카" />
+            <option value="손오공" />
+            <option value="꽃" />
+            <option value="Ditto" />
+            <option value="Hype boy" />
+            <option value="물론" />
+            <option value="헤어지자 말해요" />
+            <option value="Heaven(2023)" />
+            <option value="OMG" />
+            <option value="파이팅 해야지" />
+            <option value="사건의 지평선" />
+            <option value="Cupid" />
+            <option value="Teddy Bear" />
+            <option value="I Don't Think That I Like Her" />
+            <option value="Dangerously" />
+            <option value="After Like" />
+            <option value="빛이 나는 너에게" />
+            <option value="Friend The End" />
+            <option value="심(心)" />
+            <option value="안녕이라고 말하지마" />
+            <option value="Antifragile" />
+            <option value="Attention" />
+            <option value="사랑..그게 뭔데" />
+            <option value="Love Dive" />
+            <option value="Night Dancer" />
+            <option value="CHRISTIAN" />
+            <option value="Allergy" />
+            <option value="나의 바람 (Wind And Wish)" />
+            <option value="사랑은 늘 도망가" />
+            <option value="사랑인가 봐" />
+            <option value="사람 Pt.2" />
+            <option value="Love me like this" />
+            <option value="KNOCK" />
+            <option value="F*uck My life" />
+            <option value="너의 모든 순간" />
+            <option value="사랑하기 싫어" />
+            <option value="사랑하지 않아서 그랬어" />
+            <option value="Thirsty" />
+            <option value="Nxde" />
+            <option value="건물 사이에 피어난 장미" />
+            <option value="해요 (2022)" />
+            <option value="Nostalgia" />
+            <option value="STAY" />
+            <option value="That's Hilarious" />
+            <option value="그라데이션" />
+            <option value="Candy" />
+        </datalist>
+
+        <img src="https://pbs.twimg.com/profile_images/1102850944037875713/fd6m9fwl_400x400.jpg" alt="image" width="100" class="head">
+        <h1 class="head">TOP 50</h1>
+        <hr>
+        <br>
+        <div class="music">순위</div><div class="music_2">곡정보</div><div class="music_3">앨범</div><div class="play">듣기</div><div class="vedio">뮤비</div>
+        <br><br>
+        <hr>
+
+        <br><br>
+        <div class="char">1</div>
+        <img src="https://image.bugsm.co.kr/album/images/500/40849/4084947.jpg" class="music_img">
+        <button onclick="gasa_open_1()" class="gasa"></button>
+        <div class="char_2"><b>I am</b></div>
+        <a href="album/album_I_am.html" target="_blank"><div class="char_3"><b>I've IVE</b></div></a>
+        <audio src="music/I AM.mp3" controls="controls" class="control"></audio>
+        <a href="https://www.youtube.com/watch?v=6ZUIwj3FgUY&pp=ygUESSBhbQ%3D%3D" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/0/375.png" class="play_2"></a>
+        <br>
+        <p class="char_4"><small><small>IVE(아이브)</small></small></p>
+        <br>
+        <hr class="thu">
+
+        <br><br>
+        <div class="char">2</div>
+        <img src="https://image.bugsm.co.kr/album/images/500/40859/4085992.jpg" class="music_img">
+        <button onclick="gasa_open_2()" class="gasa"></button>
+        <div class="char_2"><b>UNFORGIVEN (feat. Ni...</b></div>
+        <a href="album/album_UNFORGIVEN.html" target="_blank"><div class="char_3"><b>UNFORGIVEN</b></div></a>
+        <audio src="music/UNFORGIVEN.mp3" controls="controls" class="control"></audio>
+
+        <a href="https://www.youtube.com/watch?v=UBURTj20HXI" target="_blank">
+            <img src="https://cdn-icons-png.flaticon.com/512/0/375.png" class="play_2">
+        </a>
+        
+        <br>
+        <p class="char_4"><small><small>LE SSERAFIM(르세라핌)</small></small></p>
+        <br>
+        <hr class="thu">
+
+        <br><br>
+        <div class="char">3</div>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhltJ8LgtDHXKzSsWiNZE6wMkzF5Q59WvlWg&usqp=CAU" class="music_img">
+        <button onclick="gasa_open_3()" class="gasa"></button>
+        <div class="char_2"><b>Spicy</b></div>
+        <a href="album/album_MY_WORLD.html" target="_blank"><div class="char_3"><b>MY WORLD - The 3rd Mi...</b></div></a>
+        <audio src="music/Spicy.mp3" controls="controls" class="control"></audio>
+        <a href="https://www.youtube.com/watch?v=Os_heh8vPfs" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/0/375.png" class="play_2"></a>
+        <br>
+        <p class="char_4"><small><small>aespa</small></small></p>
+        <br>
+        <hr class="thu">
+
+        <br><br>
+        <div class="char">4</div>
+        <img src="https://image.bugsm.co.kr/album/images/500/40849/4084947.jpg" class="music_img">
+        <button onclick="gasa_open_4()" class="gasa"></button>
+        <div class="char_2"><b>Kitsch</b></div>
+        <a href="album/album_lyrics/1.html" target="_blank"><div class="char_3"><b>I've IVE</b></div></a>
+        <audio src="music/Kitsch.mp3" controls="controls" class="control"></audio>
+        <a href="https://www.youtube.com/watch?v=pG6iaOMV46I" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/0/375.png" class="play_2"></a>
+        <br>
+        <p class="char_4"><small><small>IVE(아이브)</small></small></p>
+        <br>
+        <hr class="thu">
+
+        <br><br>
+        <div class="char">5</div>
+        <img src="https://musicmeta-phinf.pstatic.net/album/009/637/9637036.jpg?type=r480Fll&v=20230515205137" class="music_img">
+        <button onclick="gasa_open_5()" class="gasa"></button>
+        <div class="char_2"><b>퀸카(Queencard)</b></div>
+        <a href="album/album_I_feel.html" target="_blank"><div class="char_3"><b>I feel</b></div></a>
+        <audio src="music/퀸카(Queencard).mp3" controls="controls" class="control"></audio>
+        <a href="https://www.youtube.com/watch?v=7HDeem-JaSY" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/0/375.png" class="play_2"></a>
+        <br>
+        <p class="char_4"><small><small>(여자)아이들</small></small></p>
+        <br>
+        <hr class="thu">
+
+        <br><br>
+        <div class="char">6</div>
+        <img src="https://musicmeta-phinf.pstatic.net/album/009/554/9554326.jpg?type=r480Fll&v=20230526183537" class="music_img">
+        <button onclick="gasa_open_6()" class="gasa"></button>
+        <div class="char_2"><b>손오공</b></div>
+        <a href="album/album_손오공.html" target="_blank"><div class="char_3"><b>SEVENTEEN Mini Al...</b></div></a>
+        <audio src="music/손오공.mp3" controls="controls" class="control"></audio>
+        <a href="https://www.youtube.com/watch?v=-GQg25oP0S4" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/0/375.png" class="play_2"></a>
+        <br>
+        <p class="char_4"><small><small>세븐틴(SEVENTEEN)</small></small></p>
+        <br>
+        <hr class="thu">
+
+        <br><br>
+        <div class="char">7</div>
+        <img src="https://musicmeta-phinf.pstatic.net/album/009/399/9399447.jpg?type=r480Fll&v=20230405181219" class="music_img">
+        <button onclick="gasa_open_7()" class="gasa"></button>
+        <div class="char_2"><b>꽃</b></div>
+        <a href="album/album_꽃.html" target="_blank"><div class="char_3"><b>ME</b></div></a>
+        <audio src="music/꽃.mp3" controls="controls" class="control"></audio>
+        <a href="https://www.youtube.com/watch?v=YudHcBIxlYw" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/0/375.png" class="play_2"></a>
+        <br>
+        <p class="char_4"><small><small>지수(JISOO)</small></small></p>
+        <br>
+        <hr class="thu">
+
+        <br><br>
+        <div class="char">8</div>
+        <img src="https://musicmeta-phinf.pstatic.net/album/008/500/8500274.jpg?type=r480Fll&v=20230331083651" class="music_img">
+        <button onclick="gasa_open_8()" class="gasa"></button>
+        <div class="char_2"><b>Ditto</b></div>
+        <a href="album/album_ditto.html" target="_blank"><div class="char_3"><b>NewJeans'OMG'</b></div></a>
+        <audio src="music/Ditto.mp3" controls="controls" class="control"></audio>
+        <a href="https://www.youtube.com/watch?v=pSUydWEqKwE" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/0/375.png" class="play_2"></a>
+        <br>
+        <p class="char_4"><small><small>Newjeans</small></small></p>
+        <br>
+        <hr class="thu">
+
+        <br><br>
+        <div class="char">9</div>
+        <img src="https://musicmeta-phinf.pstatic.net/album/007/795/7795016.jpg?type=r480Fll&v=20230331094801" class="music_img">
+        <button onclick="gasa_open_9()" class="gasa"></button>
+        <div class="char_2"><b>Hype boy</b></div>
+        <a href="album/album_Hype_boy.html" target="_blank"><div class="char_3"><b>Newjeans 1st EP'New Je...</b></div></a>
+        <audio src="music/Hype_boy.mp3" controls="controls" class="control"></audio>
+        <a href="https://www.youtube.com/watch?v=9wUKhEgnllc" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/0/375.png" class="play_2"></a>
+        <br>
+        <p class="char_4"><small><small>Newjeans</small></small></p>
+        <br>
+        <hr class="thu">
+
+        <br><br>
+        <div class="char">10</div>
+        <img src="https://musicmeta-phinf.pstatic.net/album/009/613/9613552.jpg?type=r480Fll&v=20230427154411" class="music_img">
+        <button onclick="gasa_open_10()" class="gasa"></button>
+        <div class="char_2"><b>물론</b></div>
+        <a href="album/album_물론.html" target="_blank"><div class="char_3"><b>물론</b></div></a>
+        <audio src="music/물론.mp3" controls="controls" class="control"></audio>
+        <a href="https://www.youtube.com/watch?v=Na3dPzWMeRM" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/0/375.png" class="play_2"></a>
+        <br>
+        <p class="char_4"><small><small>허각</small></small></p>
+        <br>
+        <hr class="thu">
+
+        <br><br>
+        <div class="char">11</div>
+        <img src="https://musicmeta-phinf.pstatic.net/album/009/494/9494325.jpg?type=r480Fll&v=20230419175019" class="music_img">
+        <button onclick="gasa_open_11()" class="gasa"></button>
+        <div class="char_2"><b>헤어지자 말해요</b></div>
+        <a href="album/album_헤어지자_말해요.html" target="_blank"><div class="char_3"><b>1집 Alone</b></div></a>
+        <audio src="music/헤어지자_말해요.mp3" controls="controls" class="control"></audio>
+        <a href="https://www.youtube.com/watch?v=yFlxYHjHYAw" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/0/375.png" class="play_2"></a>
+        <br>
+        <p class="char_4"><small><small>박재정</small></small></p>
+        <br>
+        <hr class="thu">
+
+        <br><br>
+        <div class="char">12</div>
+        <img src="https://musicmeta-phinf.pstatic.net/album/009/554/9554582.jpg?type=r480Fll&v=20230424165144" class="music_img">
+        <button onclick="gasa_open_12()" class="gasa"></button>
+        <div class="char_2"><b>Heaven(2023)</b></div>
+        <a href="album/album_Heaven.html" target="_blank"><div class="char_3"><b>시작은 첫키스 OST Part.1</b></div></a>
+        <audio src="music/Heaven(2023).mp3" controls="controls" class="control"></audio>
+        <a href="https://www.youtube.com/watch?v=pXhz55HGj9Y" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/0/375.png" class="play_2"></a>
+        <br>
+        <p class="char_4"><small><small>임재현</small></small></p>
+        <br>
+        <hr class="thu">
+
+        <br><br>
+        <div class="char">13</div>
+        <img src="https://musicmeta-phinf.pstatic.net/album/008/500/8500274.jpg?type=r480Fll&v=20230331083651지" class="music_img">
+        <button onclick="gasa_open_13()" class="gasa"></button>
+        <div class="char_2"><b>OMG</b></div>
+        <a href="album/album_ditto.html" target="_blank"><div class="char_3"><b>Newjeans'OMG'</b></div></a>
+        <audio src="music/OMG.mp3" controls="controls" class="control"></audio>
+        <a href="https://www.youtube.com/watch?v=_ZAgIHmHLdc" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/0/375.png" class="play_2"></a>
+        <br>
+        <p class="char_4"><small><small>Newjeans</small></small></p>
+        <br>
+        <hr class="thu">
+
+        <br><br>
+        <div class="char">14</div>
+        <img src="https://musicmeta-phinf.pstatic.net/album/008/835/8835837.jpg?type=r480Fll&v=20230331080758" class="music_img">
+        <button onclick="gasa_open_14()" class="gasa"></button>
+        <div class="char_2"><b>파이팅 해야지(feat.이영지)</b></div>
+        <a href="album/album_파이팅해야지.html" target="_blank"><div class="char_3"><b>부석순 1st Single Album...</b></div></a>
+        <audio src="music/파이팅_해야지.mp3" controls="controls" class="control"></audio>
+        <a href="https://www.youtube.com/watch?v=mBXBOLG06Wc" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/0/375.png" class="play_2"></a>
+        <br>
+        <p class="char_4"><small><small>부석순</small></small></p>
+        <br>
+        <hr class="thu">
+
+        <br><br>
+        <div class="char">15</div>
+        <img src="https://musicmeta-phinf.pstatic.net/album/007/434/7434553.jpg?type=r480Fll&v=20230307002030" class="music_img">
+        <button onclick="gasa_open_15()" class="gasa"></button>
+        <div class="char_2"><b>사건의 지평선</b></div>
+        <a href="album/album_사건의지평선.html" target="_blank"><div class="char_3"><b>YOUNHA 6th Album Rep...</b></div></a>
+        <audio src="music/사건의_지평선.mp3" controls="controls" class="control"></audio>
+        <a href="https://www.youtube.com/watch?v=73V3xrfiYMo" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/0/375.png" class="play_2"></a>
+        <br>
+        <p class="char_4"><small><small>윤하(YOUNHA)</small></small></p>
+        <br>
+        <hr class="thu">
+
+        <br><br>
+        <div class="char">16</div>
+        <img src="https://musicmeta-phinf.pstatic.net/album/009/178/9178590.jpg?type=r480Fll&v=20230331074239" class="music_img">
+        <button onclick="gasa_open_16()" class="gasa"></button>
+        <div class="char_2"><b>Cupid</b></div>
+        <a href="album/album_cupid.html" target="_blank"><div class="char_3"><b>The Beginning:Cupid</b></div></a>
+        <audio src="music/Cupid.mp3" controls="controls" class="control"></audio>
+        <a href="https://www.youtube.com/watch?v=Qc7_zRjH808" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/0/375.png" class="play_2"></a>
+        <br>
+        <p class="char_4"><small><small>FIFTY FIFTY</small></small></p>
+        <br>
+        <hr class="thu">
+
+        <br><br>
+        <div class="char">17</div>
+        <img src="https://musicmeta-phinf.pstatic.net/album/008/830/8830640.jpg?type=r480Fll&v=20230331080829" class="music_img">
+        <button onclick="gasa_open_17()" class="gasa"></button>
+        <div class="char_2"><b>Teddy Bear</b></div>
+        <a href="album/album_Teddy_Bear.html" target="_blank"><div class="char_3"><b>Teddy Bear</b></div></a>
+        <audio src="music/Teddy_Bear.mp3" controls="controls" class="control"></audio>
+        <a href="https://www.youtube.com/watch?v=SxHmoifp0oQ" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/0/375.png" class="play_2"></a>
+        <br>
+        <p class="char_4"><small><small>STAYC(스테이씨)</small></small></p>
+        <br>
+        <hr class="thu">
+        
+        <br><br>
+        <div class="char">18</div>
+        <img src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMjEwMDdfOTgg%2FMDAxNjY1MTE4OTI2NDkz.TT_EuyKhYSvo44kq2Cxr9pYgxwoKAxHtxi2418ZwTwsg.AKBY-nFZOmX1Qn6VDgueV5krTPpQJg8s9WMYDEfcRjMg.JPEG.cjswodnajs%2F1665118718194.jpg&type=sc960_832" class="music_img">
+        <button onclick="gasa_open_18()" class="gasa"></button>
+        <div class="char_2"><b>I Don't Think That I Like Her</b></div>
+        <a href="album/I Don't Think That I Like Her.album.html" target="_blank"><div class="char_3"><b>CHARLIE</b></div></a>
+        <audio src="music/I Dont Think That I Like Her.mp3" controls="controls" class="control"></audio>
+        <a href="https://www.youtube.com/watch?v=9voN0gkdlS4" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/0/375.png" class="play_2"></a>
+        <br>
+        <p class="char_4"><small><small>Charlie Puth</small></small></p>
+        <br>
+        <hr class="thu">
+
+        <br><br>
+        <div class="char">19</div>
+        <img src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMjAzMTVfMjYy%2FMDAxNjQ3MzU0NDgyNzU5.5C6AuAeQMdTsCVcqqzJdvGba7qsFmcaCCYlp2IvYkycg.u4NvxbjidOFVsDMUlCaSVHgIHrl7Im81uEmNoDTbVzcg.JPEG.moaminzoo%2FIMG_0226.jpg&type=sc960_832" class="music_img">
+        <button onclick="gasa_open_19()" class="gasa"></button>
+        <div class="char_2"><b>Dangerously</b></div>
+        <a href="album/Dangerously.album.html" target="_blank"><div class="char_3"><b>Nine Track Mind</b></div></a>
+        <audio src="music/Dangerously.mp3" controls="controls" class="control"></audio>
+        <a href="https://www.youtube.com/watch?v=TBXQu8ORnBQ" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/0/375.png" class="play_2"></a>
+        <br>
+        <p class="char_4"><small><small>Charlie Puth</small></small></p>
+        <br>
+        <hr class="thu">
+
+        <br><br>
+        <div class="char">20</div>
+        <img src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMjA4MjVfMjU5%2FMDAxNjYxNDA0NTc4Mjc2.b_44xB_XmqE5YlHkMWjmMBXlXEeB1JLAw5tngVgwz6og.YfOv8FNc7rt0FaxoIMmNG_8n5-kMfA46xuG7y1NJCVgg.JPEG.trap119%2FKejgegge.jpg&type=sc960_832" class="music_img">
+        <button onclick="gasa_open_20()" class="gasa"></button>
+        <div class="char_2"><b>After Like</b></div>
+        <a href="album/After Like.album.html" target="_blank"><div class="char_3"><b>After Like</b></div></a>
+        <audio src="music/After LIKE.mp3" controls="controls" class="control"></audio>
+        <a href="https://www.youtube.com/watch?v=F0B7HDiY-10" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/0/375.png" class="play_2"></a>
+        <br>
+        <p class="char_4"><small><small>IVE(아이브)</small></small></p>
+        <br>
+        <hr class="thu">
+
+        <br><br>
+        <div class="char">21</div>
+        <img src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMzA0MTVfMTMx%2FMDAxNjgxNDg0NjE2NjM5.1GEFF0kQHbiO8ZdunJSx-GauulejrZZ2q5U0UH6c41Eg.7JXWLwnLz3BXQ9JcZ_2a6UKdBYgRPPhyDsQNJgsYuHsg.JPEG.ppongmangchi%2F10.jpg&type=sc960_832" class="music_img">
+        <button onclick="gasa_open_21()" class="gasa"></button>
+        <div class="char_2"><b>빛이 나는 너에게</b></div>
+        <a href="album/빛이 나는 너에게.albim.html" target="_blank"><div class="char_3"><b>빛이 나는 너에게</b></div></a>
+        <audio src="music/빛이 나는 너에게.mp3" controls="controls" class="control"></audio>
+        <a href="https://www.youtube.com/watch?v=yyrKLHNCbq0" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/0/375.png" class="play_2"></a>
+        <br>
+        <p class="char_4"><small><small>던(DAWN)</small></small></p>
+        <br>
+        <hr class="thu">
+
+        <br><br>
+        <div class="char">22</div>
+        <img src="https://search.pstatic.net/common/?src=http%3A%2F%2Fimgnews.naver.net%2Fimage%2F5349%2F2023%2F04%2F16%2F1681605216_450509_20230416093801790.jpg&type=sc960_832" class="music_img">
+        <button onclick="gasa_open_22()" class="gasa"></button>
+        <div class="char_2"><b>Friend The End</b></div>
+        <a href="album/Friend The End.album.html" target="_blank"><div class="char_3"><b>사랑.zip</b></div></a>
+        <audio src="music/FRIEND THE END.mp3" controls="controls" class="control"></audio>
+        <a href="https://www.youtube.com/watch?v=haceXrrm-LU" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/0/375.png" class="play_2"></a>
+        <br>
+        <p class="char_4"><small><small>볼빨간사춘기</small></small></p>
+        <br>
+        <hr class="thu">
+        
+        <br><br>
+        <div class="char">23</div>
+        <img src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMzAyMTlfMTY0%2FMDAxNjc2ODE2NTkyMDE3.cToXeXjJXagTLJdcMjs_gts-xIO88ht6jhwyoDce2K0g.TOodL4Pl9C2OWOnjhPy0vzXaB3ITwWtjhkNAQjgMQLMg.PNG.a_heyjoung%2F%25EC%258A%25A4%25ED%2581%25AC%25EB%25A6%25B0%25EC%2583%25B7_2023-02-19_%25EC%2598%25A4%25ED%259B%2584_11.23.08.png%2Fundefined&type=sc960_832" class="music_img">
+        <button onclick="gasa_open_23()" class="gasa"></button>
+        <div class="char_2"><b>심(心)</b></div>
+        <a href="album/심(心).album.html" target="_blank"><div class="char_3"><b>심(心)</b></div></a>
+        <audio src="music/심.mp3" controls="controls" class="control"></audio>
+        <a href="https://www.youtube.com/watch?v=OMjDI2NqQ9M" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/0/375.png" class="play_2"></a>
+        <br>
+        <p class="char_4"><small><small>DK(디셈버)</small></small></p>
+        <br>
+        <hr class="thu">
+
+        <br><br>
+        <div class="char">24</div>
+        <img src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMzA0MzBfMjcw%2FMDAxNjgyODQ2MjA2Nzg2.OzFPoNXZwtKfRxGmeLUSHgF-QntYMUqeqIB-782UHQgg.F7p8RneZ6yxXesNJxTO2w4MBOJRJGZEOqKz19HhkCFMg.JPEG.lhs4868197%2F9284.jpg&type=sc960_832" class="music_img">
+        <button onclick="gasa_open_24()" class="gasa"></button>
+        <div class="char_2"><b>안녕이라고 말하지마</b></div>
+        <a href="album/안녕이라고 말하지마.album.html" target="_blank"><div class="char_3"><b>안녕이라고 말하지마</b></div></a>
+        <audio src="music/안녕이라고 말하지마.mp3" controls="controls" class="control"></audio>
+        <a href="https://www.youtube.com/watch?v=Yw3-w2Q2e9g" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/0/375.png" class="play_2"></a>
+        <br>
+        <p class="char_4"><small><small>V.O.S</small></small></p>
+        <br>
+        <hr class="thu">
+
+        <br><br>
+        <div class="char">25</div>
+        <img src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMjEwMjBfNjIg%2FMDAxNjY2MjQwNTMzNDgw.HDhBliqI4RAHJBdlvri_5v6hcwrtjoYPGHl_SGrlwF4g.lJB3S8kk6Y0UuzF0SaeqZh6TMq1gPr57eM93CoLpGi4g.JPEG.easyselling%2F%25C8%25AD%25B8%25E9_%25C4%25B8%25C3%25B3_2022-10-20_133521.jpg&type=sc960_832" class="music_img">
+        <button onclick="gasa_open_25()" class="gasa"></button>
+        <div class="char_2"><b>Antifragile</b></div>
+        <a href="album/Antifragile.album.html" target="_blank"><div class="char_3"><b>ANTIFRAGILE</b></div></a>
+        <audio src="music/ANTIFRAGILE.mp3" controls="controls" class="control"></audio>
+        <a href="https://www.youtube.com/watch?v=pyf8cbqyfPs" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/0/375.png" class="play_2"></a>
+        <br>
+        <p class="char_4"><small><small>LE SSERAFIM(르세라핌)</small></small></p>
+        <br>
+        <hr class="thu">
+
+        <br><br>
+        <div class="char">26</div>
+        <img src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMjA4MTFfMjUx%2FMDAxNjYwMjAxNTE5MDI3.5u8rTLKzqLmyydxpO8JwOs67Smqu2auqJ4AtJhCRje8g.VzVSth4NpP5S_V_s5ISLwhKhVJDt9VCwjZyj1siWtZAg.JPEG.iintband%2F%25BF%25B5%25C5%25EB%25BA%25B8%25C4%25C3%25C7%25D0%25BF%25F8_%25C0%25CE%25C6%25AE%25BF%25A3%25C5%25CD%25C5%25D7%25C0%25CE%25B8%25D5%25C6%25AE_4.jpg&type=sc960_832" class="music_img">
+        <button onclick="gasa_open_26()" class="gasa"></button>
+        <div class="char_2"><b>Attention</b></div>
+        <a href="album/album_Hype_boy.html" target="_blank"><div class="char_3"><b>NewJeans</b></div></a>
+        <audio src="music/Attention.mp3" controls="controls" class="control"></audio>
+        <a href="https://www.youtube.com/watch?v=js1CtxSY38I" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/0/375.png" class="play_2"></a>
+        <br>
+        <p class="char_4"><small><small>NewJeans</small></small></p>
+        <br>
+        <hr class="thu">
+
+        <br><br>
+        <div class="char">27</div>
+        <img src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMzA1MjVfMTQx%2FMDAxNjg0OTk2MDkwOTAw.5P57cmiD9PA1MyyY2oYiKbsvIV5yHlN05GeunIyfQtIg.cs9etaSOSwroMTJLlOi750CYbj35ABrRMnDr-HWA-HIg.PNG.csy9720%2F%25C1%25F6%25BE%25C6.PNG&type=sc960_832" class="music_img">
+        <button onclick="gasa_open_27()" class="gasa"></button>
+        <div class="char_2"><b>사랑..그게 뭔데</b></div>
+        <a href="album/사랑..그게 뭔데.album.html" target="_blank"><div class="char_3"><b>사랑..그게 뭔데</b></div></a>
+        <audio src="music/사랑그게 뭔데.mp3" controls="controls" class="control"></audio>
+        <a href="https://www.youtube.com/watch?v=crgvbjlLrTc" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/0/375.png" class="play_2"></a>
+        <br>
+        <p class="char_4"><small><small>지아</small></small></p>
+        <br>
+        <hr class="thu">
+
+        <br><br>
+        <div class="char">28</div>
+        <img src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMjA1MTBfMTU2%2FMDAxNjUyMTQwNTc0Nzkw.CmlHhUvOhKSu4Zrjr7OXfA-5XHTZJfQnDN9F3DY_SLMg.i4FMdbhublNVZk8PeaMuaAYO7oXULgJpAw7VNtHDKugg.JPEG.ji7491%2F%25B4%25D9%25BF%25EE%25B7%25CE%25B5%25E5_%25281%2529.jpg&type=sc960_832" class="music_img">
+        <button onclick="gasa_open_28()" class="gasa"></button>
+        <div class="char_2"><b>Love Dive</b></div>
+        <a href="album/album_love_dive.html" target="_blank"><div class="char_3"><b>Love Dive</b></div></a>
+        <audio src="music/LOVE DIVE.mp3" controls="controls" class="control"></audio>
+        <a href="https://www.youtube.com/watch?v=Y8JFxS1HlDo" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/0/375.png" class="play_2"></a>
+        <br>
+        <p class="char_4"><small><small>IVE(아이브)</small></small></p>
+        <br>
+        <hr class="thu">
+
+        <br><br>
+        <div class="char">29</div>
+        <img src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMjA5MjBfMTY0%2FMDAxNjYzNjgxMTY4MjY4.ZK1LiTtAT8N7XDsCcwcH0xRrZADH6t9Ph0qVaSZdXiAg.kochoHCgRbX5WV2P7H29V7Ypd5t5SyTPHKW8kfU-_UYg.JPEG.raida901%2FScreenshot%25A3%25DF20220920%25A3%25DF223912.jpg&type=sc960_832" class="music_img">
+        <button onclick="gasa_open_29()" class="gasa"></button>
+        <div class="char_2"><b>Night Dancer</b></div>
+        <a href="album/Night Dancer.album.html" target="_blank"><div class="char_3"><b>Night Dancer</b></div></a>
+        <audio src="music/NIGHT DANCER.mp3" controls="controls" class="control"></audio>
+        <a href="https://www.youtube.com/watch?v=kagoEGKHZvU" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/0/375.png" class="play_2"></a>
+        <br>
+        <p class="char_4"><small><small>imase</small></small></p>
+        <br>
+        <hr class="thu">
+
+        <br><br>
+        <div class="char">30</div>
+        <img src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMzA0MThfNjYg%2FMDAxNjgxODA4NzQzNDYy.Fu1rElDNgLj5Jjgfnv5doOnzygp7kLjL_1I6IkpfQcYg.Ep0zTgkpp1oYt6HMx2S9Jf3D63C5130KABzKbsq81D8g.JPEG.vessels20%2F%25B4%25D9%25BF%25EE%25B7%25CE%25B5%25E5%25C6%25C4%25C0%25CF%25A3%25AD1.jpg&type=sc960_832" class="music_img">
+        <button onclick="gasa_open_30()" class="gasa"></button>
+        <div class="char_2"><b>CHRISTIAN</b></div>
+        <a href="album/CHRISTIAN.album.html" target="_blank"><div class="char_3"><b>WHERE DOES SASQUATC...</b></div></a>
+        <audio src="music/CHRISTIAN.mp3" controls="controls" class="control"></audio>
+        <a href="https://www.youtube.com/watch?v=Dqlr8EDunCM" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/0/375.png" class="play_2"></a>
+        <br>
+        <p class="char_4"><small><small>Zior Park</small></small></p>
+        <br>
+        <hr class="thu">
+
+        <br><br>
+        <div class="char">31</div>
+        <img src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMzA1MTVfNDIg%2FMDAxNjg0MTQxNjkxNzk0.DRzYEjX765TwOWkgxnIid9e9IQ6o6Z-5dTN9uceU-uQg.1cB-DH-gYEAkIONljf_nxFaP_Gy9albe7UFpF9WudfIg.JPEG.cylab%2F%2528%25BF%25A9%25C0%25DA%2529%25BE%25C6%25C0%25CC%25B5%25E9_-_Allergy.jpg&type=sc960_832" class="music_img">
+        <button onclick="gasa_open_31()" class="gasa"></button>
+        <div class="char_2"><b>Allergy</b></div>
+        <a href="album/Allergy.album.html" target="_blank"><div class="char_3"><b>I feel</b></div></a>
+        <audio src="music/Allergy.mp3" controls="controls" class="control"></audio>
+        <a href="https://www.youtube.com/watch?v=XZaBkbvteBc" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/0/375.png" class="play_2"></a>
+        <br>
+        <p class="char_4"><small><small>(여자)아이들</small></small></p>
+        <br>
+        <hr class="thu">
+
+        <br><br>
+        <div class="char">32</div>
+        <img src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMzA1MDJfNTkg%2FMDAxNjgzMDE4MjA2ODgw.0v9YTglj_DhDXXhVSe52mi3WuvXpsWff9rj-E8cfzUQg.oz_QjGNke5wpt-sfaol5IsBxyDTqQumnLfMmoREH3dQg.JPEG.cylab%2F%25BA%25F1%25C5%25F5%25BA%25F1_-_%25B3%25AA%25C0%25C7_%25B9%25D9%25B6%25F7_%2528Wind_And_Wish%2529.jpg&type=sc960_832" class="music_img">
+        <button onclick="gasa_open_32()" class="gasa"></button>
+        <div class="char_2"><b>나의 바람 (Wind And Wish)</b></div>
+        <a href="album/album_나의_바람.html" target="_blank"><div class="char_3"><b>WIND AND WISH</b></div></a>
+        <audio src="music/나의 바람.mp3" controls="controls" class="control"></audio>
+        <a href="https://www.youtube.com/watch?v=zXOoza3sxiw" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/0/375.png" class="play_2"></a>
+        <br>
+        <p class="char_4"><small><small>비투비</small></small></p>
+        <br>
+        <hr class="thu">
+
+        <br><br>
+        <div class="char">33</div>
+        <img src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMTExMTZfMTQw%2FMDAxNjM3MDU4MDU2MDc1.-MijhYQrzSf8ExvlH614c2eybmrgAsCXXzvOzjNe3_8g.BUgxZDSZyOJ93Jpm0pEa9-r0oVC8jjRBMLpyqcPCD74g.JPEG.very0528%2F%25B4%25D9%25BF%25EE%25B7%25CE%25B5%25E5%25C6%25C4%25C0%25CF_%25A3%25A81%25A3%25A9.jpg&type=sc960_832" class="music_img">
+        <button onclick="gasa_open_33()" class="gasa"></button>
+        <div class="char_2"><b>사랑은 늘 도망가</b></div>
+        <a href="album/사랑은 늘 도망가.album.html" target="_blank"><div class="char_3"><b>신사와 아가씨 OST Part.2</b></div></a>
+        <audio src="music/사랑은 늘 도망가.mp3" controls="controls" class="control"></audio>
+        <a href="https://www.youtube.com/watch?v=LKQ-18LoFQk" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/0/375.png" class="play_2"></a>
+        <br>
+        <p class="char_4"><small><small>임영웅</small></small></p>
+        <br>
+        <hr class="thu">
+
+        <br><br>
+        <div class="char">34</div>
+        <img src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMjAyMThfMTcx%2FMDAxNjQ1MTc2MDY2MjQy.iISDAloPXoJfstBPe2sznH1jbTKKEwQPdbjqRM11Yf4g.OUPh1sWIqXDnxyPLkZDkI-3JSBD9ah--yRd4SvCscnkg.PNG.yyjjss111%2F20220218_182026.png&type=sc960_832" class="music_img">
+        <button onclick="gasa_open_34()" class="gasa"></button>
+        <div class="char_2"><b>사랑인가 봐</b></div>
+        <a href="album/사랑인가 봐.album.html" target="_blank"><div class="char_3"><b>사랑인가 봐</b></div></a>
+        <audio src="music/사랑인가 봐.mp3" controls="controls" class="control"></audio>
+        <a href="https://www.youtube.com/watch?v=UoBsiQW23IY" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/0/375.png" class="play_2"></a>
+        <br>
+        <p class="char_4"><small><small>멜로망스</small></small></p>
+        <br>
+        <hr class="thu">
+
+        <br><br>
+        <div class="char">35</div>
+        <img src="https://cdnimg.melon.co.kr/cm2/album/images/112/19/412/11219412_20230421104829_500.jpg/melon/resize/120/quality/80/optimize" class="music_img">
+        <button onclick="gasa_open_35()" class="gasa"></button>
+        <div class="char_2"><b>사람 Pt.2 (feat. 아이유)</b></div>
+        <a href="album/35_album.html" target="_blank"><div class="char_3"><b>D-DAY</b></div></a>
+        <audio src="music/사람 Pt.2.mp3" controls="controls" class="control"></audio>
+        <a href="https://www.youtube.com/watch?v=uVD-YgzDzyY&pp=ygUS7IKs656MIHB0LjIg666k67mE" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/0/375.png" class="play_2"></a>
+        <br>
+        <p class="char_4"><small><small>Agust D</small></small></p>
+        <br>
+        <hr class="thu">
+
+        <br><br>
+        <div class="char">36</div>
+        <img src="https://cdnimg.melon.co.kr/cm2/album/images/112/01/031/11201031_20230320162256_500.jpg/melon/resize/120/quality/80/optimize" class="music_img">
+        <button onclick="gasa_open_36()" class="gasa"></button>
+        <div class="char_2"><b>Love me like this</b></div>
+        <a href="album/36_album.html" target="_blank"><div class="char_3"><b>expérgo</b></div></a>
+        <audio src="music/Love me like this.mp3" controls="controls" class="control"></audio>
+        <a href="https://www.youtube.com/watch?v=EDnwWcFpObo&pp=ygUYbG92ZSBtZSBsaWtlIHRoaXMg666k67mE" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/0/375.png" class="play_2"></a>
+        <br>
+        <p class="char_4"><small><small>NMIXX</small></small></p>
+        <br>
+        <hr class="thu">
+
+        <br><br>
+        <div class="char">37</div>
+        <img src="https://cdnimg.melon.co.kr/cm2/album/images/112/21/404/11221404_20230411101938_500.jpg/melon/resize/120/quality/80/optimize" class="music_img">
+        <button onclick="gasa_open_37()" class="gasa"></button>
+        <div class="char_2"><b>KNOCK</b></div>
+        <a href="album/37_album.html" target="_blank"><div class="char_3"><b>Over The Moon</b></div></a>
+        <audio src="music/KNOCK.mp3" controls="controls" class="control"></audio>
+        <a href="https://www.youtube.com/watch?v=3bnjH5jXxJc&pp=ygUMa25vY2sg666k67mE" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/0/375.png" class="play_2"></a>
+        <br>
+        <p class="char_4"><small><small>이채연</small></small></p>
+        <br>
+        <hr class="thu">
+
+        <br><br>
+        <div class="char">38</div>
+        <img src="https://cdnimg.melon.co.kr/cm2/album/images/112/29/537/11229537_20230421170444_500.jpg/melon/resize/120/quality/80/optimize" class="music_img">
+        <button onclick="gasa_open_38()" class="gasa"></button>
+        <div class="char_2"><b>F*uck My life</b></div>
+        <a href="album/38_album.html" target="_blank"><div class="char_3"><b>SEVENTEEN 10th Mini Al...</b></div></a>
+        <audio src="music/F*uck My life.mp3" controls="controls" class="control"></audio>
+        <a href="https://www.youtube.com/watch?v=9kpuOoIh3wU&pp=ygUURip1Y2sgTXkgbGlmZSDrrqTruYQ%3D" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/0/375.png" class="play_2"></a>
+        <br>
+        <p class="char_4"><small><small>세븐틴 (SEVENTEEN)</small></small></p>
+        <br>
+        <hr class="thu">
+
+        <br><br>
+        <div class="char">39</div>
+        <img src="https://cdnimg.melon.co.kr/cm/album/images/022/32/505/2232505_500.jpg/melon/resize/120/quality/80/optimize" class="music_img">
+        <button onclick="gasa_open_39()" class="gasa"></button>
+        <div class="char_2"><b>너의 모든 순간</b></div>
+        <a href="album/39_album.html" target="_blank"><div class="char_3"><b>별에서 온 그대 OST Part.7</b></div></a>
+        <audio src="music/너의 모든 순간.mp3" controls="controls" class="control"></audio>
+        <a href="https://www.youtube.com/watch?v=Dbxzh078jr4&pp=ygUb64SI7J2YIOuqqOuToCDsiJzqsIQg666k67mE" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/0/375.png" class="play_2"></a>
+        <br>
+        <p class="char_4"><small><small>성시경</small></small></p>
+        <br>
+        <hr class="thu">
+
+        <br><br>
+        <div class="char">40</div>
+        <img src="https://cdnimg.melon.co.kr/cm2/album/images/111/88/007/11188007_20230223114254_500.jpg/melon/resize/120/quality/80/optimize" class="music_img">
+        <button onclick="gasa_open_40()" class="gasa"></button>
+        <div class="char_2"><b>사랑하기 싫어</b></div>
+        <a href="album/40_album.html" target="_blank"><div class="char_3"><b>사랑하기 싫어</b></div></a>
+        <audio src="music/사랑하기 싫어.mp3" controls="controls" class="control"></audio>
+        <a href="유튜브 뮤비" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/0/375.png" class="play_2"></a>
+        <br>
+        <p class="char_4"><small><small>지아</small></small></p>
+        <br>
+        <hr class="thu">
+
+        <br><br>
+        <div class="char">41</div>
+        <img src="https://cdnimg.melon.co.kr/cm2/album/images/112/15/072/11215072_20230331123824_500.jpg/melon/resize/120/quality/80/optimize" class="music_img">
+        <button onclick="gasa_open_41()" class="gasa"></button>
+        <div class="char_2"><b>사랑하지 않아서 그랬어</b></div>
+        <a href="album/41_album.html" target="_blank"><div class="char_3"><b>사랑하지 않아서 그랬어</b></div></a>
+        <audio src="music/사랑하지 않아서 그랬어.mp3" controls="controls" class="control"></audio>
+        <a href="https://www.youtube.com/watch?v=ve7vLxUVFpE&pp=ygUh7IKs656R7ZWY7KeAIOyViuyVhOyEnCDqt7jrnqzslrQg" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/0/375.png" class="play_2"></a>
+        <br>
+        <p class="char_4"><small><small>임한별</small></small></p>
+        <br>
+        <hr class="thu">
+
+        <br><br>
+        <div class="char">42</div>
+        <img src="https://cdnimg.melon.co.kr/cm2/album/images/112/36/264/11236264_20230508184331_500.jpg/melon/resize/120/quality/80/optimize" class="music_img">
+        <button onclick="gasa_open_42()" class="gasa"></button>
+        <div class="char_2"><b>Thirsty</b></div>
+        <a href="album/42_album.html" target="_blank"><div class="char_3"><b>MY WORLD - The 3rd Mi...</b></div></a>
+        <audio src="music/Thirsty.mp3" controls="controls" class="control"></audio>
+        <a href="https://www.youtube.com/watch?v=i0RCcSBPjuU&pp=ygUUdGhpcnN0eSBhZXNwYSDrrqTruYQ%3D" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/0/375.png" class="play_2"></a>
+        <br>
+        <p class="char_4"><small><small>aespa</small></small></p>
+        <br>
+        <hr class="thu">
+
+        <br><br>
+        <div class="char">43</div>
+        <img src="https://cdnimg.melon.co.kr/cm2/album/images/110/78/852/11078852_20221017102947_500.jpg/melon/resize/120/quality/80/optimize" class="music_img">
+        <button onclick="gasa_open_43()" class="gasa"></button>
+        <div class="char_2"><b>Nxde</b></div>
+        <a href="album/43_album.html" target="_blank"><div class="char_3"><b>I love</b></div></a>
+        <audio src="music/Nxde.mp3" controls="controls" class="control"></audio>
+        <a href="https://www.youtube.com/watch?v=fCO7f0SmrDc&pp=ygULTnhkZSDrrqTruYQ%3D" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/0/375.png" class="play_2"></a>
+        <br>
+        <p class="char_4"><small><small>(여자)아이들</small></small></p>
+        <br>
+        <hr class="thu">
+
+        <br><br>
+        <div class="char">44</div>
+        <img src="https://cdnimg.melon.co.kr/cm2/album/images/111/40/018/11140018_20230105103451_500.jpg/melon/resize/120/quality/80/optimize" class="music_img">
+        <button onclick="gasa_open_44()" class="gasa"></button>
+        <div class="char_2"><b>건물 사이에 피어난 장미</b></div>
+        <a href="album/44_album.html" target="_blank"><div class="char_3"><b>H1-KEY 1st Mini Album [...</b></div></a>
+        <audio src="music/건물 사이에 피어난 장미.mp3" controls="controls" class="control"></audio>
+        <a href="https://www.youtube.com/watch?v=vfUAckewh_8&pp=ygUn6rG066y8IOyCrOydtOyXkCDtlLzslrTrgpwg7J6l66-4666k67mE" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/0/375.png" class="play_2"></a>
+        <br>
+        <p class="char_4"><small><small>H1-KEY (하이키)</small></small></p>
+        <br>
+        <hr class="thu">
+
+        <br><br>
+        <div class="char">45</div>
+        <img src="https://cdnimg.melon.co.kr/cm2/album/images/109/75/276/10975276_20220603165713_500.jpg/melon/resize/120/quality/80/optimize" class="music_img">
+        <button onclick="gasa_open_45()" class="gasa"></button>
+        <div class="char_2"><b>해요 (2022)</b></div>
+        <a href="album/45_album.html" target="_blank"><div class="char_3"><b>해요 (2022)</b></div></a>
+        <audio src="music/해요(2022).mp3" controls="controls" class="control"></audio>
+        <a href="https://www.youtube.com/watch?v=U5TTMeIadME&pp=ygUN7ZW07JqUIOuupOu5hA%3D%3D" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/0/375.png" class="play_2"></a>
+        <br>
+        <p class="char_4"><small><small>#안녕</small></small></p>
+        <br>
+        <hr class="thu">
+
+        <br><br>
+        <div class="char">46</div>
+        <img src="https://cdnimg.melon.co.kr/cm2/album/images/111/95/614/11195614_20230303182750_500.jpg/melon/resize/120/quality/80/optimize" class="music_img">
+        <button onclick="gasa_open_46()" class="gasa"></button>
+        <div class="char_2"><b>Nostalgia</b></div>
+        <a href="album/46_album.html" target="_blank"><div class="char_3"><b>Nostalgia</b></div></a>
+        <audio src="music/Nostalgia.mp3" controls="controls" class="control"></audio>
+        <a href="https://www.youtube.com/watch?v=TV_9uXQcMFo&pp=ygUQTm9zdGFsZ2lhIOuupOu5hA%3D%3D" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/0/375.png" class="play_2"></a>
+        <br>
+        <p class="char_4"><small><small>우디 (Woody)</small></small></p>
+        <br>
+        <hr class="thu">
+
+        <br><br>
+        <div class="char">47</div>
+        <img src="https://cdnimg.melon.co.kr/cm2/album/images/106/46/395/10646395_20210707141710_500.jpg/melon/resize/120/quality/80/optimize" class="music_img">
+        <button onclick="gasa_open_47()" class="gasa"></button>
+        <div class="char_2"><b>STAY</b></div>
+        <a href="album/47_album.html" target="_blank"><div class="char_3"><b>Stay</b></div></a>
+        <audio src="music/STAY.mp3" controls="controls" class="control"></audio>
+        <a href="https://www.youtube.com/watch?v=kTJczUoc26U&pp=ygULU1RBWSDrrqTruYQ%3D" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/0/375.png" class="play_2"></a>
+        <br>
+        <p class="char_4"><small><small>The Kid LABROI,Justion Bieber</small></small></p>
+        <br>
+        <hr class="thu">
+
+        <br><br>
+        <div class="char">48</div>
+        <img src="https://cdnimg.melon.co.kr/cm2/album/images/108/44/485/10844485_20221006154824_500.jpg/melon/resize/120/quality/80/optimize" class="music_img">
+        <button onclick="gasa_open_48()" class="gasa"></button>
+        <div class="char_2"><b>That's Hilarious</b></div>
+        <a href="album/48_album.html" target="_blank"><div class="char_3"><b>CHARLIE</b></div></a>
+        <audio src="music/That's Hilarious.mp3" controls="controls" class="control"></audio>
+        <a href="https://www.youtube.com/watch?v=sADYQRvOuDA&pp=ygUXVGhhdCdzIEhpbGFyaW91cyDrrqTruYQ%3D" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/0/375.png" class="play_2"></a>
+        <br>
+        <p class="char_4"><small><small>Charlie Puth</small></small></p>
+        <br>
+        <hr class="thu">
+
+        <br><br>
+        <div class="char">49</div>
+        <img src="https://cdnimg.melon.co.kr/cm2/album/images/109/95/477/10995477_20220701165440_500.jpg/melon/resize/120/quality/80/optimize" class="music_img">
+        <button onclick="gasa_open_49()" class="gasa"></button>
+        <div class="char_2"><b>그라데이션</b></div>
+        <a href="album/49_album.html" target="_blank"><div class="char_3"><b>5.3</b></div></a>
+        <audio src="music/그라데이션.mp3" controls="controls" class="control"></audio>
+        <a href="https://www.youtube.com/watch?v=VQZXXciZb_c&pp=ygUW6re46528642w7J207IWYIOuupOu5hA%3D%3D" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/0/375.png" class="play_2"></a>
+        <br>
+        <p class="char_4"><small><small>10CM</small></small></p>
+        <br>
+        <hr class="thu">
+
+        <br><br>
+        <div class="char">50</div>
+        <img src="https://cdnimg.melon.co.kr/cm2/album/images/111/24/139/11124139_20221215162633_500.jpg/melon/resize/120/quality/80/optimize" class="music_img">
+        <button onclick="gasa_open_50()" class="gasa"></button>
+        <div class="char_2"><b>Candy</b></div>
+        <a href="album/50_album.html" target="_blank"><div class="char_3"><b>Candy - Winter Special...</b></div></a>
+        <audio src="music/Candy.mp3" controls="controls" class="control"></audio>
+        <a href="https://www.youtube.com/watch?v=zuoSn3ObMz4&pp=ygUMQ2FuZHkg666k67mE" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/0/375.png" class="play_2"></a>
+        <br>
+        <p class="char_4"><small><small>NCT DREAM</small></small></p>
+        <br>
+        <hr class="thu">
+
+        <script>
+            function search() {
+                var input = document.getElementById('searchInput').value.toLowerCase(); // 검색 입력을 소문자로 변환
+                var elements = document.getElementsByClassName('char_2');
+                var firstMatch = null;
+
+                for (var i = 0; i < elements.length; i++) {
+                    var element = elements[i];
+                    var found = false;
+
+                    // 요소의 텍스트 내용을 소문자로 변환하여 비교
+                    var elementText = element.textContent.toLowerCase();
+                    if (elementText.includes(input)) {
+                    found = true;
+                    }
+
+                    // 요소의 표시 여부 설정
+                    if (found) {
+                    element.style.display = 'block';
+
+                    // 첫 번째 일치하는 요소 저장
+                    if (!firstMatch) {
+                        firstMatch = element;
+                    }
+                    } else {
+                    element.style.display = 'block';
+                    }
+                }
+
+                // 첫 번째 일치하는 요소로 스크롤
+                if (firstMatch) {
+                    var scrollOffset = firstMatch.offsetTop - 105; // 스크롤 위치를 105 픽셀 위로 설정
+                    window.scrollTo({ top: scrollOffset, behavior: 'smooth' });
+                }
+                }
+
+            function home(){
+                window.scrollTo({top:0, behavior:"smooth"});
+            }
+
+            function gasa_open_1(){
+                window.open("lyrics/1.html", "_blank", "left=0, right:0, width=700, height=800");
+            }
+            function gasa_open_2(){
+                window.open("lyrics/2.html", "_blank", "left=0, right:0, width=700, height=800");
+            }
+            function gasa_open_3(){
+                window.open("lyrics/3.html", "_blank", "left=0, right:0, width=700, height=800");
+            }
+            function gasa_open_4(){
+                window.open("lyrics/4.html", "_blank", "left=0, right:0, width=700, height=800");
+            }
+            function gasa_open_5(){
+                window.open("lyrics/5.html", "_blank", "left=0, right:0, width=700, height=800");
+            }
+            function gasa_open_6(){
+                window.open("lyrics/6.html", "_blank", "left=0, right:0, width=700, height=800");
+            }
+            function gasa_open_7(){
+                window.open("lyrics/7.html", "_blank", "left=0, right:0, width=700, height=800");
+            }
+            function gasa_open_8(){
+                window.open("lyrics/8.html", "_blank", "left=0, right:0, width=700, height=800");
+            }
+            function gasa_open_9(){
+                window.open("lyrics/9.html", "_blank", "left=0, right:0, width=700, height=800");
+            }
+            function gasa_open_10(){
+                window.open("lyrics/10.html", "_blank", "left=0, right:0, width=700, height=800");
+            }
+            function gasa_open_11(){
+                window.open("lyrics/11.html", "_blank", "left=0, right:0, width=700, height=800");
+            }
+            function gasa_open_12(){
+                window.open("lyrics/12.html", "_blank", "left=0, right:0, width=700, height=800");
+            }
+            function gasa_open_13(){
+                window.open("lyrics/13.html", "_blank", "left=0, right:0, width=700, height=800");
+            }
+            function gasa_open_14(){
+                window.open("lyrics/14.html", "_blank", "left=0, right:0, width=700, height=800");
+            }
+            function gasa_open_15(){
+                window.open("lyrics/15.html", "_blank", "left=0, right:0, width=700, height=800");
+            }
+            function gasa_open_16(){
+                window.open("lyrics/16.html", "_blank", "left=0, right:0, width=700, height=800");
+            }
+            function gasa_open_17(){
+                window.open("lyrics/17.html", "_blank", "left=0, right:0, width=700, height=800");
+            }
+            function gasa_open_18(){
+                window.open("lyrics/18.html", "_blank", "left=0, right:0, width=700, height=800");
+            }
+            function gasa_open_19(){
+                window.open("lyrics/19.html", "_blank", "left=0, right:0, width=700, height=800");
+            }
+            function gasa_open_20(){
+                window.open("lyrics/20.html", "_blank", "left=0, right:0, width=700, height=800");
+            }
+            function gasa_open_21(){
+                window.open("lyrics/21.html", "_blank", "left=0, right:0, width=700, height=800");
+            }
+            function gasa_open_22(){
+                window.open("lyrics/22.html", "_blank", "left=0, right:0, width=700, height=800");
+            }
+            function gasa_open_23(){
+                window.open("lyrics/23.html", "_blank", "left=0, right:0, width=700, height=800");
+            }
+            function gasa_open_24(){
+                window.open("lyrics/24.html", "_blank", "left=0, right:0, width=700, height=800");
+            }
+            function gasa_open_25(){
+                window.open("lyrics/25.html", "_blank", "left=0, right:0, width=700, height=800");
+            }
+            function gasa_open_26(){
+                window.open("lyrics/26.html", "_blank", "left=0, right:0, width=700, height=800");
+            }
+            function gasa_open_27(){
+                window.open("lyrics/27.html", "_blank", "left=0, right:0, width=700, height=800");
+            }
+            function gasa_open_28(){
+                window.open("lyrics/28.html", "_blank", "left=0, right:0, width=700, height=800");
+            }
+            function gasa_open_29(){
+                window.open("lyrics/29.html", "_blank", "left=0, right:0, width=700, height=800");
+            }
+            function gasa_open_30(){
+                window.open("lyrics/30.html", "_blank", "left=0, right:0, width=700, height=800");
+            }
+            function gasa_open_31(){
+                window.open("lyrics/31.html", "_blank", "left=0, right:0, width=700, height=800");
+            }
+            function gasa_open_32(){
+                window.open("lyrics/32.html", "_blank", "left=0, right:0, width=700, height=800");
+            }
+            function gasa_open_33(){
+                window.open("lyrics/33.html", "_blank", "left=0, right:0, width=700, height=800");
+            }
+            function gasa_open_34(){
+                window.open("lyrics/34.html", "_blank", "left=0, right:0, width=700, height=800");
+            }
+            function gasa_open_35(){
+                window.open("lyrics/35.html", "_blank", "left=0, right:0, width=700, height=800");
+            }
+            function gasa_open_36(){
+                window.open("lyrics/36.html", "_blank", "left=0, right:0, width=700, height=800");
+            }
+            function gasa_open_37(){
+                window.open("lyrics/37.html", "_blank", "left=0, right:0, width=700, height=800");
+            }
+            function gasa_open_38(){
+                window.open("lyrics/38.html", "_blank", "left=0, right:0, width=700, height=800");
+            }
+            function gasa_open_39(){
+                window.open("lyrics/39.html", "_blank", "left=0, right:0, width=700, height=800");
+            }
+            function gasa_open_40(){
+                window.open("lyrics/40.html", "_blank", "left=0, right:0, width=700, height=800");
+            }
+            function gasa_open_41(){
+                window.open("lyrics/41.html", "_blank", "left=0, right:0, width=700, height=800");
+            }
+            function gasa_open_42(){
+                window.open("lyrics/42.html", "_blank", "left=0, right:0, width=700, height=800");
+            }
+            function gasa_open_43(){
+                window.open("lyrics/43.html", "_blank", "left=0, right:0, width=700, height=800");
+            }
+            function gasa_open_44(){
+                window.open("lyrics/44.html", "_blank", "left=0, right:0, width=700, height=800");
+            }
+            function gasa_open_45(){
+                window.open("lyrics/45.html", "_blank", "left=0, right:0, width=700, height=800");
+            }
+            function gasa_open_46(){
+                window.open("lyrics/46.html", "_blank", "left=0, right:0, width=700, height=800");
+            }
+            function gasa_open_47(){
+                window.open("lyrics/47.html", "_blank", "left=0, right:0, width=700, height=800");
+            }
+            function gasa_open_48(){
+                window.open("lyrics/48.html", "_blank", "left=0, right:0, width=700, height=800");
+            }
+            function gasa_open_49(){
+                window.open("lyrics/49.html", "_blank", "left=0, right:0, width=700, height=800");
+            }
+            function gasa_open_50(){
+                window.open("lyrics/50.html", "_blank", "left=0, right:0, width=700, height=800");
+            }
+
+        </script>
+
+
+    </body>
+
+</html>
